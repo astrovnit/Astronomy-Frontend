@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* font-family: "Cormorant Garamond", serif !important; */
+  font-family: 'Roboto Serif', serif !important;
+  /* background-image: url("../public/cubes.png") !important; */
+  /* background-color: rgb(113, 113, 113) !important; */
+  /* font-family: "Ubuntu", sans-serif !important; */
+  /* font-family: "Playfair Display", serif !important; */
+  /* font-family: "Maven Pro", sans-serif !important; */
+  /* font-family: "Quattrocento", serif !important; */
+  /* font-family: "Gruppo", cursive !important; */
+  /* font-family: Montserrat !important; */
+  /* font-weight: 900; */
+}
+.mont {
+  /* font-family: "ubuntu", sans-serif; */
+}
+a:hover {
+  color: skyblue !important;
+}
+.logo {
+  border-radius: 500px;
+  width: 60px;
+}
+.login-box,
+.signup-box {
+  background-color: white;
+}
+
+.readable {
+  font-size: 25px;
+}
+.footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+
+  /* color: white; */
+  text-align: center;
+}
+.big {
+  font-size: 4vh;
+}
+
+/* NAVBAR CSS  /////////////////////////////////////////////////////////////////*/
+.navbar {
+  background-color: rgb(0, 0, 0);
+  /* border-radius: 5px; */
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+/* NAVBAR CSS ENDS HERE  ///////////////////////////////////////////////////////*/
+
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+.mt-6 {
+  margin-top: 100px;
+}
+
+.dashboard {
+  background: url("../public/vnit.jpg");
+  /* background: url("../public/vnit.jpg"); */
+
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+
+  height: 95vh;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  font-size: 50px;
+  background: rgba(255, 255, 255, 0.88);
+  /* font-family: "Montserrat", sans-serif; */
+  letter-spacing: 0.02em;
+}
+.dashboard-name {
+  font-size: 2em;
+  letter-spacing: 0.4em;
+}
+.dashboard-name::before {
+  display: table;
+  content: "";
+  color: blue;
+  height: 50px;
+}
+
+.add-exp-cursive {
+  font-family: cursive;
+}
+
+.readable-low {
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .nav-item {
+    margin-bottom: 15px;
+  }
+  .hover-2 {
+    width: 90% !important;
+  }
+  .box {
+  }
+  .box-2 {
+    width: 90% !important;
+  }
+}
+@media (max-width: 700px) {
+  .student-details {
+    margin-left: 50px !important;
+  }
+}
+.box {
+  width: 70%;
+  margin: auto;
+}
+.box-2 {
+  width: 70%;
+  margin: auto;
+}
+
+.company-heading {
+  background-color: rgb(0, 0, 0);
+}
+.student-details-outer-div {
+  background-color: rgb(0, 0, 0);
+}
+.compensation-outer-div {
+  background-color: black;
+  margin-top: 20px;
+  padding: 30px !important;
+}
+.experience-outer-div {
+  background-color: black;
+  margin-top: 20px;
+  padding: 30px !important;
+}
+.badge-big {
+  font-size: 15px !important;
+}
+.black-box {
+  background-color: black;
+  color: white;
+}
+.blog-bg {
+  background-image: url(../public/cubes2.png);
+}
+/* Extra CSS */
+
+.card {
+  width: 360px;
+  height: 416px;
+  padding: 60px 30px;
+  margin: 20px;
+  background: white;
+  box-shadow: 0.3em 0.3em 0.6em #d2dce9, -0.5em -0.5em 1em #ffffff;
+}
+.card {
+  background: linear-gradient(90deg, #e0f2fe 50%, white 50%);
+  transition: 0.5s;
+}
+.imgBx {
+  transition: transform 0.5s;
+
+}
+.card:hover .imgBx {
+  
+  border-radius: 50px;
+  transform: scale(1.2);
+}
+.card .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card .content .imgBx {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  margin-bottom: 20px;
+  display: inline-block;
+  overflow: hidden;
+}
+.card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+.card .content .contentBx h4 {
+  color: #36187d;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.card .content .contentBx h5 {
+  color: #819ef5;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}
+.card .content .sci {
+  margin-top: 50px;
+}
+.card .content .sci ul {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+}
+
+.card .content .sci ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+.card .content .sci ul li .fa {
+  color: #000000;
+  font-size: 25px;
+  line-height: 50px;
+  transition: 0.5s;
+}
+.card .content .sci ul li .fa:hover {
+  color: #da2f2f;
+}
+.card .content .sci a {
+  text-decoration: none;
+  color: #0196e3;
+  font-size: 30px;
+  margin: 10px;
+  transition: color 0.4s;
+}
+.card .content .sci a:hover {
+  color: #6c758f;
+}
+
+/* DELETE THIS */
