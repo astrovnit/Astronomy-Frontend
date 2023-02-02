@@ -46,7 +46,7 @@ function Contactus(props) {
     }
     setSubmit(true);
     axios
-      .post("/contact", null, {
+      .post("https://astrovnit.onrender.com/contact", null, {
         params: {
           name: name,
           email: email,

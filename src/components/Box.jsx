@@ -20,7 +20,7 @@ function Box(props) {
   function handleApprove() {
     setSubmit(true);
     axios
-      .post("/approve", null, {
+      .post("https://astrovnit.onrender.com/approve", null, {
         params: {
           id: props.data._id,
         },
@@ -34,7 +34,7 @@ function Box(props) {
   function handleReject() {
     setSubmit(true);
     axios
-      .post("/reject", null, {
+      .post("https://astrovnit.onrender.com/reject", null, {
         params: {
           id: props.data._id,
         },

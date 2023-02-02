@@ -27,7 +27,7 @@ function Showblog(props) {
     setMessage(-1);
     if (data === "") {
       axios
-        .get("/getData", {
+        .get("https://astrovnit.onrender.com/getData", {
           params: {
             id: id,
           },

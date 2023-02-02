@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": "true",
-  "proxy": "https://astrovnit.onrender.com",
   "dependencies": {
     "@chakra-ui/icon": "^3.0.13",
     "@chakra-ui/icons": "^2.0.14",

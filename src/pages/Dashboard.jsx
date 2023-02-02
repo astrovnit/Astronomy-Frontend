@@ -17,7 +17,7 @@ function Dashboard(props) {
   useEffect(() => {
     setMessage(-1);
     if (data == null) {
-      axios.get("/pending").then((res) => {
+      axios.get("https://astrovnit.onrender.com/pending").then((res) => {
         setData(res.data.data);
       });
     }

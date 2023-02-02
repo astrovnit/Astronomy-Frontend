@@ -11,7 +11,7 @@ const Blogcard = (props) => {
   function handleApprove() {
     setSubmit(true);
     axios
-      .post("/approve", null, {
+      .post("https://astrovnit.onrender.com/approve", null, {
         params: {
           id: props.data._id,
         },
@@ -25,7 +25,7 @@ const Blogcard = (props) => {
   function handleReject() {
     setSubmit(true);
     axios
-      .post("/reject", null, {
+      .post("https://astrovnit.onrender.com/reject", null, {
         params: {
           id: props.data._id,
         },

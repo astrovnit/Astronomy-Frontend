@@ -33,7 +33,7 @@ function App() {
     }
   });
   function isLoggedin() {
-    axios.get("/getUserInfo").then((res) => {
+    axios.get("https://astrovnit.onrender.com/getUserInfo").then((res) => {
       console.log(res.data);
       setLogin(res.data.isLoggedin);
       setUser(res.data.user);

@@ -13,7 +13,7 @@ function Blogs(props) {
 
   useEffect(() => {
     if (data === "") {
-      axios.get("/blogs").then((res) => {
+      axios.get("https://astrovnit.onrender.com/blogs").then((res) => {
         setData(() => {
           let temp = res.data.data;
           temp.reverse();

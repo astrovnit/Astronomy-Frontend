@@ -66,7 +66,7 @@ function Addexperience(props) {
         blog: blog,
       };
       axios
-        .post("/postexp", null, {
+        .post("https://astrovnit.onrender.com/postexp", null, {
           params: newBlog,
         })
         .then((res) => {

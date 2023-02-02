@@ -14,7 +14,7 @@ function Navbar(props) {
   });
   const toast = useToast();
   function logout() {
-    axios.get("/logout").then((res) => {
+    axios.get("https://astrovnit.onrender.com/logout").then((res) => {
       setMessage(res.data.message);
       props.setLogin(false);
       props.setUser({ isAdmin: false });
