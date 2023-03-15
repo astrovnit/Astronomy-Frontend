@@ -23,9 +23,9 @@ function Footer() {
           <p className="">
             Phone : <span className="text-sky-300"> 8452029034</span>
           </p>
-          <p className="mt-2">Kalpesh (Advisor)</p>
+          <p className="mt-2">Aditya (Vice President)</p>
           <p className="">
-            Phone : <span className="text-sky-300"> 9359985003</span>
+            Phone : <span className="text-sky-300"> 6389614492</span>
           </p>
         </div>
 

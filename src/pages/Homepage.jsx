@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -13,7 +14,6 @@ function Homepage(props) {
           <p className="px-10 mx-10 mb-10 text-5xl  text-indigo-900">
             Space Talk
           </p>
-         
 
           <p className="px-10 mx-10 text-5xl  mb-10 text-indigo-900">
             Star Gazzing
@@ -21,8 +21,6 @@ function Homepage(props) {
           <p className="px-10 mx-10 text-5xl mb-10 text-fuchsia-700 underline">
             <Link to="/login">Explore More </Link>
           </p>
-
-          
         </div>
         <div className="homeImage lg:w-2/3 m-auto">
           <img src="../home2.jpeg" alt="home graphic" />
@@ -30,7 +28,6 @@ function Homepage(props) {
       </div>
 
       <div className="flex flex-col lg:flex-row border border-slate-50 mx-4 mt-3 mb-3">
-        
         <div className="lg:w-1/2 w-6/7 m-auto">
           <div className="container  lg:px-10  p-6 shadow-lg rounded-lg  shadow-gray-300 text-gray-700">
             <p className="font-bold text-2xl text-center">Who We Are</p>
@@ -60,7 +57,6 @@ function Homepage(props) {
         id="here"
         className="flex flex-col lg:flex-row border border-slate-50 mx-4 mt-3 mb-3"
       >
-        
         <div className="lg:w-1/2 w-6/7 m-auto">
           <div className="container order-first md:order-last lg:px-10 p-6 shadow-lg rounded-lg  shadow-gray-300 text-gray-700">
             <p className="font-bold text-2xl text-center">
@@ -109,7 +105,18 @@ function Homepage(props) {
           />
         </div>
       </div>
-      
+      <div className="text-center">
+        <Link to="/blogs">
+          <Button className="m-3" variant="outline" colorScheme="linkedin">
+            Blogs
+          </Button>
+        </Link>
+        <Link to="/signup">
+          <Button className="m-3" variant="outline" colorScheme="linkedin">
+            <span className="">Get Started</span>
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }

@@ -5,20 +5,23 @@ const team = [
     imgurl: "nihar.png",
     instagram: "https://instagram.com/this.is.nihar?igshid=NTA5ZTk1NTc=",
     linkedin: "https://www.linkedin.com/in/nihar-vankudre-777a3a206",
+    phone: "+91 8452029034",
   },
   {
     name: "Aditya Mishra",
     imgurl: "adityamishra.png",
     position: "Vice President",
-    instagram: "http://instagram.com",
-    linkedin: "http://linkedin.com",
+    instagram: "",
+    linkedin: "https://www.linkedin.com/mwlite/in/aditya-mishra-b3081a20a",
+    phone: "+91 6389614492",
   },
   {
     name: "Pranav Unkal",
     position: "Head Of Content Creation",
     imgurl: "pranav.jpeg",
     instagram: "https://www.instagram.com/pranav_5612/",
-    linkedin: "www.linkedin.com/in/pranav-unkal",
+    linkedin: "https://www.linkedin.com/in/pranav-unkal",
+    phone: "+91 9373829927",
   },
   // {
   //   name: "Aashish Mishra",
@@ -32,13 +35,15 @@ const team = [
     imgurl: "om2.png",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/om-dalavi-7833a51b5/",
+    phone: "+91 9654703319",
   },
   {
     name: "Bhushan Bahale",
     position: "Head Of Technology",
     imgurl: "bhushan.jpeg",
-    instagram: "http://instagram.com",
-    linkedin: "http://linkedin.com",
+    instagram: "",
+    linkedin: "",
+    phone: "+91 9610657385",
   },
   {
     name: "Mayur Jadhav",
@@ -46,6 +51,7 @@ const team = [
     imgurl: "mayur.png",
     instagram: "https://www.instagram.com/mayur._9696/",
     linkedin: "https://www.linkedin.com/in/mayur-jadhav-56265720a",
+    phone: "+91 9730200931",
   },
   {
     name: "Aditya Kakade",
@@ -53,6 +59,7 @@ const team = [
     imgurl: "adityak.png",
     instagram: "https://instagram.com/adikakade_20?igshid=NTA5ZTk1NTc=",
     linkedin: "https://www.linkedin.com/in/aditya-kakade-783109232",
+    phone: "+91 7028420121",
   },
   {
     name: "Dhawal Diyewar",
@@ -60,6 +67,7 @@ const team = [
     imgurl: "dhawal.png",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/dhawal-diyewar-32713824a",
+    phone: "+91 9146462230",
   },
 
   // {
@@ -78,8 +86,9 @@ const team = [
     name: "Vedashri Patil",
     position: "Head Of Research",
     imgurl: "vedashri.png",
-    instagram: "http://instagram.com",
-    linkedin: "http://linkedin.com",
+    instagram: "",
+    linkedin: "",
+    phone: "+91 7350873585",
   },
 ];
 

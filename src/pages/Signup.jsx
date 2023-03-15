@@ -91,6 +91,9 @@ function Signup(props) {
   useEffect(() => {
     setMessage(-1);
   }, [message]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="relative flex flex-col justify-center  overflow-hidden">

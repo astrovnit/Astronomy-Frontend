@@ -4,16 +4,22 @@ const Member = (props) => {
   return (
     <div className="card rounded-2xl">
       <div className="content">
-        <div className="imgBx rounded-2xl" >
-          <img className="rounded-full "  src={`../../${props.member.imgurl}`} alt="Astronomy Core" />
+        <div className="imgBx rounded-2xl">
+          <img
+            className="rounded-full "
+            src={`../../${props.member.imgurl}`}
+            alt="Astronomy Core"
+          />
         </div>
         <div class="contentBx mt-5">
           <h4 className="fw-bold">{props.member.name}</h4>
           <p className="text-center text-sm">{props.member.position}</p>
         </div>
-        <div class="sci">
+        <div className="sci">
           <ul>
-          <li>
+            
+
+            <li>
               {" "}
               <a href={props.member.linkedin}>
                 <svg
@@ -30,7 +36,7 @@ const Member = (props) => {
             </li>
             <li>
               {" "}
-              <a href={props.member.instagram} >
+              <a href={props.member.instagram}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
@@ -44,8 +50,8 @@ const Member = (props) => {
               </a>
             </li>
             
-            
           </ul>
+          
         </div>
       </div>
     </div>
