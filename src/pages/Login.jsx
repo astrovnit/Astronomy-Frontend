@@ -62,7 +62,7 @@ function Login(props) {
     }
     setSubmit(true);
     axios
-      .post("https://astrovnit-backend.cyclic.app/user/login", null, {
+      .post("https://astrobackend.cyclic.app/user/login", null, {
         params: {
           username: username,
           password: password,
@@ -94,7 +94,7 @@ function Login(props) {
     }
     setSubmit(true);
     axios
-      .post("https://astrovnit-backend.cyclic.app/user/resetPassword", null, {
+      .post("https://astrobackend.cyclic.app/user/resetPassword", null, {
         params: {
           username: musername,
           enrollment: menrollment,

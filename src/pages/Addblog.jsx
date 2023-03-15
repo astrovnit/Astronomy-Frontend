@@ -59,7 +59,7 @@ function Addblog(props) {
         token: props.token,
       };
       axios
-        .post("https://astrovnit-backend.cyclic.app/blog/postblog", null, {
+        .post("https://astrobackend.cyclic.app/blog/postblog", null, {
           params: newBlog,
         })
         .then((res) => {

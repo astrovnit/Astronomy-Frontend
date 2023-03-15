@@ -13,7 +13,7 @@ function Dashboard(props) {
   useEffect(() => {
     if (callCount === 0) {
       axios
-        .get("https://astrovnit-backend.cyclic.app/admin/pending", {
+        .get("https://astrobackend.cyclic.app/admin/pending", {
           params: {
             token: props.token,
           },

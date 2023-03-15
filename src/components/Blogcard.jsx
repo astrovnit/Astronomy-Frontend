@@ -18,7 +18,7 @@ const Blogcard = (props) => {
   function handleApprove() {
     setSubmit(true);
     axios
-      .post("https://astrovnit-backend.cyclic.app/admin/approve", null, {
+      .post("https://astrobackend.cyclic.app/admin/approve", null, {
         params: {
           id: props.data._id,
           message: usermessage,
@@ -35,7 +35,7 @@ const Blogcard = (props) => {
   function handleReject() {
     setSubmit(true);
     axios
-      .post("https://astrovnit-backend.cyclic.app/admin/reject", null, {
+      .post("https://astrobackend.cyclic.app/admin/reject", null, {
         params: {
           id: props.data._id,
           message: usermessage,
@@ -61,7 +61,7 @@ const Blogcard = (props) => {
   function handleDelete() {
     setSubmit(true);
     axios
-      .post("https://astrovnit-backend.cyclic.app/admin/delete", null, {
+      .post("https://astrobackend.cyclic.app/admin/delete", null, {
         params: {
           id: props.data._id,
           token: props.token,

@@ -36,7 +36,7 @@ function App() {
       return;
     } else {
       axios
-        .get("https://astrovnit-backend.cyclic.app/user/getUserInfo", {
+        .get("https://astrobackend.cyclic.app/user/getUserInfo", {
           params: {
             token: cookies.get("authToken"),
           },

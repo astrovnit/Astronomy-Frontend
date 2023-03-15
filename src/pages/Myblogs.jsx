@@ -14,7 +14,7 @@ function Myblogs(props) {
     }
     if (callCount === 0) {
       axios
-        .get("https://astrovnit-backend.cyclic.app/user/myblogs", {
+        .get("https://astrobackend.cyclic.app/user/myblogs", {
           params: { userid: props.user._id, token: props.token },
         })
         .then((res) => {

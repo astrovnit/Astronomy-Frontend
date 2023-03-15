@@ -11,7 +11,7 @@ function Showblog(props) {
   useEffect(() => {
     if (data === "") {
       axios
-        .get("https://astrovnit-backend.cyclic.app/blog/getData", {
+        .get("https://astrobackend.cyclic.app/blog/getData", {
           params: {
             id: id,
           },

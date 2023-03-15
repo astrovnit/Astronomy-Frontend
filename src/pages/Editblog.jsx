@@ -25,7 +25,7 @@ function Editblog(props) {
   useEffect(() => {
     if (data === "") {
       axios
-        .get("https://astrovnit-backend.cyclic.app/blog/getBlogData", {
+        .get("https://astrobackend.cyclic.app/blog/getBlogData", {
           params: {
             id: id,
             token: props.token,
@@ -86,7 +86,7 @@ function Editblog(props) {
         token: props.token,
       };
       axios
-        .post("https://astrovnit-backend.cyclic.app/blog/updateBlog", null, {
+        .post("https://astrobackend.cyclic.app/blog/updateBlog", null, {
           params: newBlog,
         })
         .then((res) => {

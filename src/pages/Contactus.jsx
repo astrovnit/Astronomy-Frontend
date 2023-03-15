@@ -45,7 +45,7 @@ function Contactus(props) {
     }
     setSubmit(true);
     axios
-      .post("https://astrovnit-backend.cyclic.app/contact", null, {
+      .post("https://astrobackend.cyclic.app/contact", null, {
         params: {
           name: name,
           email: email,

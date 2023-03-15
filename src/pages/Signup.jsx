@@ -55,7 +55,7 @@ function Signup(props) {
     }
     setSubmit(true);
     axios
-      .post("https://astrovnit-backend.cyclic.app/user/register", null, {
+      .post("https://astrobackend.cyclic.app/user/register", null, {
         params: {
           name: name,
           username: username,

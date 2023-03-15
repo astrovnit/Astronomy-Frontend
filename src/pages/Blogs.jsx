@@ -9,16 +9,14 @@ function Blogs(props) {
 
   useEffect(() => {
     if (callCount === 0) {
-      axios
-        .get("https://astrovnit-backend.cyclic.app/blog/blogs")
-        .then((res) => {
-          setData(() => {
-            let temp = res.data.data;
-            temp.reverse();
-            return temp;
-          });
-          setCallCount(1);
+      axios.get("https://astrobackend.cyclic.app/blog/blogs").then((res) => {
+        setData(() => {
+          let temp = res.data.data;
+          temp.reverse();
+          return temp;
         });
+        setCallCount(1);
+      });
     }
   });
 
