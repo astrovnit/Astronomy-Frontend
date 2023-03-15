@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Box from "../components/Box";
-import { Button, ButtonGroup, IconButton } from "@chakra-ui/react";
-import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+
+import { Button } from "@chakra-ui/react";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 
@@ -17,7 +14,7 @@ function Contactus(props) {
   const toast = useToast();
   useEffect(() => {
     setMessage(-1);
-  });
+  }, [message]);
   function handleChange(e) {
     switch (e.target.id) {
       case "name":
@@ -28,6 +25,8 @@ function Contactus(props) {
         break;
       case "text":
         setText(e.target.value);
+        break;
+      default:
         break;
     }
   }
@@ -40,13 +39,13 @@ function Contactus(props) {
     setText("");
   }
   function handleSubmit() {
-    if (name == "" || email == "" || text == "") {
+    if (name === "" || email === "" || text === "") {
       setMessage(2);
       return;
     }
     setSubmit(true);
     axios
-      .post("https://astrovnit.onrender.com/contact", null, {
+      .post("https://astrovnit-backend.cyclic.app/contact", null, {
         params: {
           name: name,
           email: email,
@@ -66,7 +65,11 @@ function Contactus(props) {
         <section className="mb-30 text-gray-800">
           <div className="flex flex-wrap">
             <div className="grow-0 shrink-0 basis-auto  md:mb-0 w-full md:w-6/12 px-3 lg:px-6 ">
-              <img className="w-full m-auto xl" src="../../contactus.jpeg" />
+              <img
+                className="w-full m-auto xl"
+                src="../../contactus.jpeg"
+                alt="Contact Graphic"
+              />
             </div>
             <div className="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
               <form className="p-6 shadow-lg rounded-lg bg-gray-100 text-gray-700">
@@ -81,7 +84,7 @@ function Contactus(props) {
               w-full
               px-3
               py-1.5
-              text-base
+              text-sm
               font-normal
               text-gray-700
               bg-white bg-clip-padding
@@ -90,7 +93,7 @@ function Contactus(props) {
               transition
               ease-in-out
               m-0
-              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none "
                     id="name"
                     placeholder="Your Name"
                   />
@@ -103,7 +106,7 @@ function Contactus(props) {
               w-full
               px-3
               py-1.5
-              text-base
+              text-sm
               font-normal
               text-gray-700
               bg-white bg-clip-padding
@@ -126,9 +129,9 @@ function Contactus(props) {
               w-full
               px-3
               py-1.5
-              text-base
+              text-sm
               font-normal
-              text-gray-900
+              text-gray-700
               bg-white bg-clip-padding
               border border-solid border-gray-300
               rounded-xl
@@ -151,7 +154,7 @@ function Contactus(props) {
             bg-blue-600
             text-white
             font-medium
-            text-md
+            text-sm
             leading-tight
             uppercase
             rounded-xl
@@ -172,7 +175,7 @@ function Contactus(props) {
           </div>
         </section>
       </div>
-      {message == 0
+      {message === 0
         ? toast({
             title: "Server Error",
             description: "Please Try Again",
@@ -180,7 +183,7 @@ function Contactus(props) {
             duration: 3000,
             isClosable: true,
           })
-        : message == 1
+        : message === 1
         ? toast({
             title: "Sent Successfully",
             description: "",
@@ -188,7 +191,7 @@ function Contactus(props) {
             duration: 3000,
             isClosable: true,
           })
-        : message == 2
+        : message === 2
         ? toast({
             title: "Fields cant be empty",
             description: "Please fill all the fields",

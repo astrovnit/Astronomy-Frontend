@@ -1,44 +1,52 @@
 import React, { useState, useEffect } from "react";
-import { Route } from "react-router-dom";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  useParams,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Errorpage from "./pages/Errorpage";
 import Dashboard from "./pages/Dashboard";
-import Addexperience from "./pages/Addexperience";
+import Addblog from "./pages/Addblog";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import axios from "axios";
 import Showblog from "./pages/Showblog";
 import Blogs from "./pages/Blogs";
 import Contactus from "./pages/Contactus";
+import Myblogs from "./pages/Myblogs";
 import About from "./pages/About";
+import Signup from "./pages/Signup";
+import Editblog from "./pages/Editblog";
+import Cookies from "universal-cookie";
 
 function App() {
+  const cookies = new Cookies();
   const [isLogin, setLogin] = useState(false);
-  const [callCount,setCallCount]=useState(0);
-  // const [user, setUser] = useState(()=>{
-  //   isLoggedin();
-  // });
+  const [callCount, setCallCount] = useState(0);
+  const [token, setToken] = useState(cookies.get("authToken"));
   const [user, setUser] = useState({
-    isAdmin:false,
+    isAdmin: false,
   });
 
   useEffect(() => {
-    if(callCount==0){
+    if (callCount === 0) {
       isLoggedin();
     }
   });
   function isLoggedin() {
-    axios.get("https://astrovnit.onrender.com/getUserInfo").then((res) => {
-      console.log(res.data);
-      setLogin(res.data.isLoggedin);
-      setUser(res.data.user);
-      setCallCount(callCount+1);
-    });
+    if (cookies.get("authToken") === undefined) {
+      setCallCount(callCount + 1);
+      return;
+    } else {
+      axios
+        .get("https://astrovnit-backend.cyclic.app/user/getUserInfo", {
+          params: {
+            token: cookies.get("authToken"),
+          },
+        })
+        .then((res) => {
+          setLogin(res.data.isLoggedin);
+          setUser(res.data.user);
+          setCallCount(callCount + 1);
+        });
+    }
   }
 
   const router = createBrowserRouter([
@@ -50,9 +58,10 @@ function App() {
           setLogin={setLogin}
           user={user}
           setUser={setUser}
+          token={token}
+          setToken={setToken}
         />
       ),
-      errorElement: <Errorpage />,
     },
     {
       path: "/login",
@@ -62,17 +71,34 @@ function App() {
           setLogin={setLogin}
           user={user}
           setUser={setUser}
+          token={token}
+          setToken={setToken}
         />
       ),
     },
     {
-      path: "/addexperience",
+      path: "/signup",
       element: (
-        <Addexperience
+        <Signup
           isLogin={isLogin}
           setLogin={setLogin}
           user={user}
           setUser={setUser}
+          token={token}
+          setToken={setToken}
+        />
+      ),
+    },
+    {
+      path: "/addblog",
+      element: (
+        <Addblog
+          isLogin={isLogin}
+          setLogin={setLogin}
+          user={user}
+          setUser={setUser}
+          token={token}
+          setToken={setToken}
         />
       ),
     },
@@ -84,6 +110,8 @@ function App() {
           setLogin={setLogin}
           user={user}
           setUser={setUser}
+          token={token}
+          setToken={setToken}
         />
       ),
     },
@@ -96,6 +124,21 @@ function App() {
           setLogin={setLogin}
           user={user}
           setUser={setUser}
+          token={token}
+          setToken={setToken}
+        />
+      ),
+    },
+    {
+      path: "/editblog/:id",
+      element: (
+        <Editblog
+          isLogin={isLogin}
+          setLogin={setLogin}
+          user={user}
+          setUser={setUser}
+          token={token}
+          setToken={setToken}
         />
       ),
     },
@@ -107,6 +150,8 @@ function App() {
           setLogin={setLogin}
           user={user}
           setUser={setUser}
+          token={token}
+          setToken={setToken}
         />
       ),
     },
@@ -118,6 +163,8 @@ function App() {
           setLogin={setLogin}
           user={user}
           setUser={setUser}
+          token={token}
+          setToken={setToken}
         />
       ),
     },
@@ -129,22 +176,37 @@ function App() {
           setLogin={setLogin}
           user={user}
           setUser={setUser}
+          token={token}
+          setToken={setToken}
         />
       ),
+    },
+    {
+      path: "/myblogs",
+      element: (
+        <Myblogs
+          isLogin={isLogin}
+          setLogin={setLogin}
+          user={user}
+          setUser={setUser}
+          token={token}
+          setToken={setToken}
+        />
+      ),
+    },
+    {
+      path: "*",
+      element: <Errorpage />,
     },
   ]);
 
   return (
-    <div>
-      
+    <div className="min-h-screen">
       <RouterProvider router={router} />
-      
+
       <Footer />
-      
     </div>
   );
-
-  
 }
 
 export default App;

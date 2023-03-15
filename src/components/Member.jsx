@@ -2,22 +2,20 @@ import React from "react";
 
 const Member = (props) => {
   return (
-    <div class="card rounded-2xl">
-      <div class="content">
-        <div class="imgBx rounded-2xl">
-          <img className="rounded-full" src={`../../${props.member.imgurl}`} alt="" />
-          {/* <img src={`../../user.jpg`} alt="" /> */}
+    <div className="card rounded-2xl">
+      <div className="content">
+        <div className="imgBx rounded-2xl" >
+          <img className="rounded-full "  src={`../../${props.member.imgurl}`} alt="Astronomy Core" />
         </div>
         <div class="contentBx mt-5">
           <h4 className="fw-bold">{props.member.name}</h4>
-          {/* <h5>{props.member.position}</h5> */}
           <p className="text-center text-sm">{props.member.position}</p>
         </div>
         <div class="sci">
           <ul>
           <li>
               {" "}
-              <a href={props.member.linkedin} target="_blank">
+              <a href={props.member.linkedin}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
@@ -32,7 +30,7 @@ const Member = (props) => {
             </li>
             <li>
               {" "}
-              <a href={props.member.instagram} target="_blank">
+              <a href={props.member.instagram} >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"

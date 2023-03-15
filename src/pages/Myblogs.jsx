@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
+import Dashblogcard from "../components/Dashblogcard";
 import Navbar from "../components/Navbar";
-import Blogcard from "../components/Blogcard";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Spinner } from "@chakra-ui/react";
-function Blogs(props) {
+function Myblogs(props) {
   const [data, setData] = useState(null);
   const [callCount, setCallCount] = useState(0);
-
+  const navigate = useNavigate();
   useEffect(() => {
+    if (!props.isLogin) {
+      navigate("/login");
+    }
     if (callCount === 0) {
       axios
-        .get("https://astrovnit-backend.cyclic.app/blog/blogs")
+        .get("https://astrovnit-backend.cyclic.app/user/myblogs", {
+          params: { userid: props.user._id, token: props.token },
+        })
         .then((res) => {
           setData(() => {
             let temp = res.data.data;
@@ -21,19 +27,19 @@ function Blogs(props) {
         });
     }
   });
-
   return (
-    <div className="blog-bg">
+    <div className="">
       <Navbar {...props} />
+
       <h1 className="w-3/4 m-auto rounded-3 p-3 text-center display-6 mt-3 mb-5  bg-slate-200 text-2xl">
-        Astronomy Blogs
+        My Blogs
       </h1>
       {data === null ? (
         <div className="text-center">
           <h1 className="text-center text-xl mt-32 mb-32">
             <Spinner className="m-4" size="xl" />
             <br />
-            <span className="">This may take time, Please Wait...</span>
+            <span className="">Loading . . . .</span>
           </h1>
         </div>
       ) : data.length === 0 ? (
@@ -47,7 +53,7 @@ function Blogs(props) {
           {data.map((blog, index) => {
             return (
               <div key={index} className="m-1">
-                <Blogcard data={blog} />
+                <Dashblogcard token={props.token} data={blog} />
               </div>
             );
           })}
@@ -57,4 +63,4 @@ function Blogs(props) {
   );
 }
 
-export default Blogs;
+export default Myblogs;

@@ -1,119 +1,115 @@
-import React, { useState } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import { Button, ButtonGroup, IconButton } from "@chakra-ui/react";
-
+import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+
+import Navbar from "../components/Navbar";
+
 function Homepage(props) {
   return (
     <div>
       <Navbar {...props} />
 
       <div className="text flex flex-row">
-        <div className="text hidden lg:block font-bold mt-20 mx-0">
-          <p className="p-10 mx-10 xl:text-5xl text-2xl text-indigo-900">
+        <div className="text hidden lg:block font-bold mt-16 mx-0">
+          <p className="px-10 mx-10 mb-10 text-5xl  text-indigo-900">
             Space Talk
           </p>
+         
 
-          <p className="px-10 mx-10 xl:text-5xl text-2xl mb-10 text-indigo-900">
+          <p className="px-10 mx-10 text-5xl  mb-10 text-indigo-900">
             Star Gazzing
           </p>
+          <p className="px-10 mx-10 text-5xl mb-10 text-fuchsia-700 underline">
+            <Link to="/login">Explore More </Link>
+          </p>
 
-          <a
-            href="#check"
-            className="mx-20 px-2  rounded-xl p-3 mt-4 xl:text-4xl text-xl text-fuchsia-700"
-          >
-            {" "}
-            <span className="underline"> Explore More </span>{" "}
-          </a>
+          
         </div>
         <div className="homeImage lg:w-2/3 m-auto">
-          <img src="../home2.jpeg" alt="" />
+          <img src="../home2.jpeg" alt="home graphic" />
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row border border-slate-50 p-5">
+      <div className="flex flex-col lg:flex-row border border-slate-50 mx-4 mt-3 mb-3">
+        
         <div className="lg:w-1/2 w-6/7 m-auto">
-          <img src="../../home1.jpg" />
-        </div>
-        <div className="lg:w-1/2 w-6/7 m-auto">
-          <div className="container  lg:px-10 m p-6 shadow-lg rounded-lg  shadow-gray-300 text-gray-700">
+          <div className="container  lg:px-10  p-6 shadow-lg rounded-lg  shadow-gray-300 text-gray-700">
             <p className="font-bold text-2xl text-center">Who We Are</p>
-            <br />
-            <p>
-              <p className="text-center">
-                Not only do we live among the stars, the stars live within us!
-              </p>
-              <br></br>
-              Barely any of us have come across that jaw-dropping, dark patch of
-              sky, covered in thousands of tiny bright specks, that has left us
-              transfixed. We, city dwellers, know nothing about what our home
-              galaxy looks like, let alone the universe! Intrigued to know what
-              it looks like? You've come to the right place!
-              <br />
-              <br />
-              {/* Ashlesha Astronomy Club (AAC) is an association of astronomy
-              enthusiasts, who share a collective objective of spreading
-              knowledge about the cosmos in the society. Ever since its
-              inception back in 2012, AAC has been successfully conducting
-              astronomy outreach events and overnight stargazing programs in and
-              around the vicinities of Mumbai and Pune. Along with being
-              equipped with skilled members and quality gadgets, our club has
-              also been actively raising awareness about myths and
-              misconceptions related to astronomy, especially in the rural
-              areas. AAC functions with a vision of reaching out to maximum
-              number of people from all age groups and overcoming its
-              geographical barriers.
-  <br />*/}
-              We, at the AAC, would love to host you at one of our stargazing
-              events. Come, take a tour through the night sky along with us and
-              experience a totally different world that exists beyond us!
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div className="flex flex-col lg:flex-row border border-slate-50 p-5">
-        <div className="lg:w-1/2 w-6/7 m-auto">
-          <div className="container  lg:px-10 m p-6 shadow-lg rounded-lg  shadow-gray-300 text-gray-700">
-            <p className="font-bold text-2xl text-center">Who We Are</p>
-            <br />
-            <p>
-              <p className="text-center">
-                Not only do we live among the stars, the stars live within us!
-              </p>
-              <br></br>
-              Barely any of us have come across that jaw-dropping, dark patch of
-              sky, covered in thousands of tiny bright specks, that has left us
-              transfixed. We, city dwellers, know nothing about what our home
-              galaxy looks like, let alone the universe! Intrigued to know what
-              it looks like? You've come to the right place!
+            <p className="mt-4">
+              We are a group of individuals united by our love for astronomy and
+              passion for exploring the universe. As a club, we organize a
+              variety of events and activities that allow members to delve
+              deeper into this fascinating field. From educational workshops and
+              guest speaker sessions to stargazing parties and telescope
+              viewings, we offer opportunities for hands-on learning and
+              personal growth.
               <br />
-              <br />
-              {/* Ashlesha Astronomy Club (AAC) is an association of astronomy
-              enthusiasts, who share a collective objective of spreading
-              knowledge about the cosmos in the society. Ever since its
-              inception back in 2012, AAC has been successfully conducting
-              astronomy outreach events and overnight stargazing programs in and
-              around the vicinities of Mumbai and Pune. Along with being
-              equipped with skilled members and quality gadgets, our club has
-              also been actively raising awareness about myths and
-              misconceptions related to astronomy, especially in the rural
-              areas. AAC functions with a vision of reaching out to maximum
-              number of people from all age groups and overcoming its
-              geographical barriers.
-  <br />*/}
-              We, at the AAC, would love to host you at one of our stargazing
-              events. Come, take a tour through the night sky along with us and
-              experience a totally different world that exists beyond us!
+              <br /> Whether you're a seasoned astronomer or just starting to
+              develop an interest in the stars, our club provides a welcoming
+              and inclusive environment for all. Come join us and be a part of a
+              community that is dedicated to advancing our understanding of the
+              cosmos.
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 w-6/7 m-auto">
-          <img src="../../home1.jpg" />
+        <div className="lg:w-1/2 w-6/7 m-auto md:place-self-end place-self-start">
+          <img src="../../home5.jpg" alt="home graphic" />
         </div>
       </div>
+      <div
+        id="here"
+        className="flex flex-col lg:flex-row border border-slate-50 mx-4 mt-3 mb-3"
+      >
+        
+        <div className="lg:w-1/2 w-6/7 m-auto">
+          <div className="container order-first md:order-last lg:px-10 p-6 shadow-lg rounded-lg  shadow-gray-300 text-gray-700">
+            <p className="font-bold text-2xl text-center">
+              Our Goal <span className="big">🎯</span>{" "}
+            </p>
+            <br />
+            <p>
+              Our goal at the Astronomy Club is to inspire and educate
+              individuals about the wonders of the universe.
+              <br /> We aim to:
+              <ul>
+                <li>
+                  ➡️Promote a deeper understanding and appreciation of astronomy
+                  through hands-on learning experiences
+                </li>
+                <li>
+                  ➡️Provide access to the latest technology and knowledge in the
+                  field
+                </li>{" "}
+                <li>
+                  ➡️Create a community of like-minded individuals who share a
+                  passion for the cosmos
+                </li>{" "}
+                <li>
+                  ➡️Encourage participation in astronomical research and
+                  projects
+                </li>
+                <li>
+                  ➡️Raise awareness of the beauty and significance of the night
+                  sky
+                </li>
+              </ul>
+              <br />
+              Whether you're an amateur astronomer or a curious learner, we hope
+              you find the information and resources on this site to be both
+              informative and entertaining.
+            </p>
+          </div>
+        </div>
+        <div className="lg:w-1/2 w-6/7 m-auto order-last md:order-first">
+          <img
+            width="600px"
+            className=""
+            src="../../home4.jpg"
+            alt="home graphic"
+          />
+        </div>
+      </div>
+      
     </div>
   );
 }

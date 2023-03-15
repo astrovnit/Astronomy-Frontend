@@ -3,159 +3,17 @@
 @tailwind utilities;
 
 body {
-  /* font-family: "Cormorant Garamond", serif !important; */
-  font-family: 'Roboto Serif', serif !important;
-  /* background-image: url("../public/cubes.png") !important; */
-  /* background-color: rgb(113, 113, 113) !important; */
-  /* font-family: "Ubuntu", sans-serif !important; */
-  /* font-family: "Playfair Display", serif !important; */
-  /* font-family: "Maven Pro", sans-serif !important; */
-  /* font-family: "Quattrocento", serif !important; */
-  /* font-family: "Gruppo", cursive !important; */
-  /* font-family: Montserrat !important; */
-  /* font-weight: 900; */
-}
-.mont {
-  /* font-family: "ubuntu", sans-serif; */
-}
-a:hover {
-  color: skyblue !important;
-}
-.logo {
-  border-radius: 500px;
-  width: 60px;
-}
-.login-box,
-.signup-box {
-  background-color: white;
+  font-family: "Roboto Serif", serif !important;
 }
 
 .readable {
   font-size: 25px;
 }
-.footer {
-  position: relative;
-  width: 100%;
-  bottom: 0;
 
-  /* color: white; */
-  text-align: center;
-}
 .big {
   font-size: 4vh;
 }
 
-/* NAVBAR CSS  /////////////////////////////////////////////////////////////////*/
-.navbar {
-  background-color: rgb(0, 0, 0);
-  /* border-radius: 5px; */
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-/* NAVBAR CSS ENDS HERE  ///////////////////////////////////////////////////////*/
-
-.right {
-  text-align: right;
-}
-.left {
-  text-align: left;
-}
-.mt-6 {
-  margin-top: 100px;
-}
-
-.dashboard {
-  background: url("../public/vnit.jpg");
-  /* background: url("../public/vnit.jpg"); */
-
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-
-  height: 95vh;
-}
-
-.dashboard-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 95vh;
-  font-size: 50px;
-  background: rgba(255, 255, 255, 0.88);
-  /* font-family: "Montserrat", sans-serif; */
-  letter-spacing: 0.02em;
-}
-.dashboard-name {
-  font-size: 2em;
-  letter-spacing: 0.4em;
-}
-.dashboard-name::before {
-  display: table;
-  content: "";
-  color: blue;
-  height: 50px;
-}
-
-.add-exp-cursive {
-  font-family: cursive;
-}
-
-.readable-low {
-  font-size: 20px;
-}
-
-@media (max-width: 1000px) {
-  .nav-item {
-    margin-bottom: 15px;
-  }
-  .hover-2 {
-    width: 90% !important;
-  }
-  .box {
-  }
-  .box-2 {
-    width: 90% !important;
-  }
-}
-@media (max-width: 700px) {
-  .student-details {
-    margin-left: 50px !important;
-  }
-}
-.box {
-  width: 70%;
-  margin: auto;
-}
-.box-2 {
-  width: 70%;
-  margin: auto;
-}
-
-.company-heading {
-  background-color: rgb(0, 0, 0);
-}
-.student-details-outer-div {
-  background-color: rgb(0, 0, 0);
-}
-.compensation-outer-div {
-  background-color: black;
-  margin-top: 20px;
-  padding: 30px !important;
-}
-.experience-outer-div {
-  background-color: black;
-  margin-top: 20px;
-  padding: 30px !important;
-}
-.badge-big {
-  font-size: 15px !important;
-}
-.black-box {
-  background-color: black;
-  color: white;
-}
 .blog-bg {
   background-image: url(../public/cubes2.png);
 }
@@ -175,10 +33,8 @@ a:hover {
 }
 .imgBx {
   transition: transform 0.5s;
-
 }
 .card:hover .imgBx {
-  
   border-radius: 50px;
   transform: scale(1.2);
 }
@@ -251,4 +107,15 @@ a:hover {
   color: #6c758f;
 }
 
-/* DELETE THIS */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM, { createRoot } from "react-dom";
+import { createRoot } from "react-dom";
+
 import App from "./App";
 import { ChakraProvider } from "@chakra-ui/react";
 import "./style.css";
