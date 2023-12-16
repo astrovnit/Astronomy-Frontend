@@ -1,6 +1,6 @@
 const team = [
   {
-    name: "Nihar Vankudre",
+    name: "Nihare Vankudre",
     position: "President",
     imgurl: "nihar.png",
     instagram: "https://instagram.com/this.is.nihar?igshid=NTA5ZTk1NTc=",
