@@ -19,13 +19,13 @@ function Footer() {
         <div className="w-full md:w-1/3 mt-3 md:mt-0">
           <h4 className="text-warning text-xl">Contact Us</h4>
 
-          <p className="mt-3">Nihar (President)</p>
+          <p className="mt-3">Chinmaya kale (President)</p>
           <p className="">
-            Phone : <span className="text-sky-300"> 8452029034</span>
+            Phone : <span className="text-sky-300"> 95947 76289</span>
           </p>
-          <p className="mt-2">Aditya (Vice President)</p>
+          <p className="mt-2">Atharva Jadhav (Vice President)</p>
           <p className="">
-            Phone : <span className="text-sky-300"> 6389614492</span>
+            Phone : <span className="text-sky-300"> 86258 56608</span>
           </p>
         </div>
 
