@@ -11,14 +11,14 @@ function Homepage(props) {
 
       <div className="text flex flex-row">
         <div className="text hidden lg:block font-bold mt-16 mx-0">
-          <p className="px-10 mx-10 mb-10 text-5xl  text-indigo-900">
-            Space Talk
+          <p className="px-10 mx-10 mb-10 text-4xl  text-indigo-900">
+            Embark On Celestial Journey
           </p>
 
-          <p className="px-10 mx-10 text-5xl  mb-10 text-indigo-900">
-            Star Gazzing
+          <p className="px-10 mx-10 text-4xl  mb-10 text-indigo-900">
+            Space Talk Star Gazing
           </p>
-          <p className="px-10 mx-10 text-5xl mb-10 text-fuchsia-700 underline">
+          <p className="px-10 mx-10 text-4xl mb-10 text-fuchsia-700 underline">
             <Link to="/login">Explore More </Link>
           </p>
         </div>
@@ -30,14 +30,14 @@ function Homepage(props) {
       <div className="flex flex-col lg:flex-row border border-slate-50 mx-4 mt-3 mb-3">
         <div className="lg:w-1/2 w-6/7 m-auto">
           <div className="container  lg:px-10  p-6 shadow-lg rounded-lg  shadow-gray-300 text-gray-700">
-            <p className="font-bold text-2xl text-center">Who We Are</p>
+            <p className="font-bold text-2xl text-center">About Us</p>
 
             <p className="mt-4">
               We are a group of individuals united by our love for astronomy and
               passion for exploring the universe. As a club, we organize a
               variety of events and activities that allow members to delve
               deeper into this fascinating field. From educational workshops and
-              guest speaker sessions to stargazing parties and telescope
+              guest speaker sessions to stargazing sessions and telescope
               viewings, we offer opportunities for hands-on learning and
               personal growth.
               <br />
@@ -74,7 +74,7 @@ function Homepage(props) {
                 </li>
                 <li>
                   ➡️Provide access to the latest technology and knowledge in the
-                  field
+                  field of astronomy and aerospace.
                 </li>{" "}
                 <li>
                   ➡️Create a community of like-minded individuals who share a

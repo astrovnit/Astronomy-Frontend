@@ -28,7 +28,7 @@ function Navbar(props) {
               src="../logo.png"
               alt="Astronomy logo"
             />
-            <span className="px-2  md:text-lg text-sm">
+            <span className="px-2  md:text-lg text-sm text-black">
               Ashlesha Astronomy Club
             </span>
 
@@ -78,28 +78,28 @@ function Navbar(props) {
           >
             <ul className=" items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-center">
               <Link to="/">
-                <li className=" hover:cursor-pointer md:my-auto mb-3   hover:text-blue-600 text-lg">
+                <li className=" hover:cursor-pointer md:my-auto mb-3 text-black  hover:text-blue-600 text-lg">
                   Home
                 </li>
               </Link>
               <Link to="/blogs">
-                <li className=" hover:cursor-pointer md:my-auto mb-3  hover:text-blue-600 text-lg">
+                <li className=" hover:cursor-pointer md:my-auto mb-3 text-black hover:text-blue-600 text-lg">
                   Blogs
                 </li>
               </Link>
               <Link to="/team">
-                <li className=" hover:cursor-pointer md:my-auto mb-3  hover:text-blue-600 text-lg">
+                <li className=" hover:cursor-pointer md:my-auto mb-3 text-black hover:text-blue-600 text-lg">
                   Team
                 </li>
               </Link>
               <Link to="/contact">
-                <li className=" hover:cursor-pointer md:my-auto mb-3  hover:text-blue-600 text-lg">
+                <li className=" hover:cursor-pointer md:my-auto mb-3 text-black hover:text-blue-600 text-lg">
                   Contact Us
                 </li>
               </Link>
               {props.user.isAdmin === true ? (
                 <Link to="/dashboard">
-                  <li className=" hover:cursor-pointer md:my-auto mb-3  hover:text-blue-600 text-lg">
+                  <li className=" hover:cursor-pointer md:my-auto mb-3 text-black hover:text-blue-600 text-lg">
                     Approvals
                   </li>
                 </Link>
@@ -109,19 +109,19 @@ function Navbar(props) {
               {props.isLogin ? (
                 <>
                   <Link to="/myblogs">
-                    <li className=" hover:cursor-pointer md:my-auto mb-3  hover:text-blue-600 text-lg">
+                    <li className=" hover:cursor-pointer md:my-auto mb-3  text-black hover:text-blue-600 text-lg">
                       My Blogs
                     </li>
                   </Link>
                   <Link to="/addblog">
-                    <li className=" hover:cursor-pointer md:my-auto mb-3  hover:text-blue-600 text-lg">
+                    <li className=" hover:cursor-pointer md:my-auto mb-3  text-black hover:text-blue-600 text-lg">
                       Add Blog
                     </li>
                   </Link>
                   <Link to="">
                     <li
                       onClick={logout}
-                      className=" hover:cursor-pointer md:my-auto mb-3  hover:text-blue-600 text-lg"
+                      className=" hover:cursor-pointer md:my-auto mb-3  text-black hover:text-blue-600 text-lg"
                     >
                       Log Out
                     </li>
@@ -130,12 +130,12 @@ function Navbar(props) {
               ) : (
                 <>
                   <Link to="/signup">
-                    <li className=" hover:cursor-pointer md:my-auto mb-3  hover:text-blue-600 text-lg flex justify-center">
+                    <li className=" hover:cursor-pointer md:my-auto mb-3  text-black hover:text-blue-600 text-lg flex justify-center">
                       Sign Up
                     </li>
                   </Link>
                   <Link to="/login">
-                    <li className=" hover:cursor-pointer md:my-auto mb-3  hover:text-blue-600 text-lg flex justify-center">
+                    <li className=" hover:cursor-pointer md:my-auto mb-3  text-black hover:text-blue-600 text-lg flex justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
