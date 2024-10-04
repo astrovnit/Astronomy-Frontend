@@ -16,7 +16,7 @@ const team = [
         phone: "+91 7875501375",
     },
     {
-        name: "Dhraj Madhavaram",
+        name: "Dhiraj Madhavaram",
         position: "Head Of Content Creation",
         imgurl: "dhiraj.png",
         instagram: "https://www.instagram.com/dhiraj___265/",
@@ -53,7 +53,7 @@ const team = [
         imgurl: "aabha.jpg",
         instagram: "https://www.instagram.com/aabhanadgouda",
         linkedin: "https://www.linkedin.com/in/aabha-nadgouda-9976a9295",
-        phone: "+91 9146462230",
+        phone: "+91 9137977464",
     },
     {
         name: "Anurag Ninawe",
@@ -61,6 +61,7 @@ const team = [
         imgurl: "anuragn.jpg",
         instagram: "https://www.instagram.com",
         linkedin: "http://linkedin.com",
+        phone: "+91 7304681059",
     },
     {
         name: "Vardhan Sunkara",
@@ -68,7 +69,7 @@ const team = [
         imgurl: "vardhan.jpg",
         instagram: "https://www.instagram.com/vardhansunkara/profilecard/?igsh=MW9tZnR1aGVpeDQ2eA==",
         linkedin: "https://www.linkedin.com/in/vardhan-sunkara-2b1ab2281/",
-        phone: "+91 9178563423"
+        phone: "+91 7095880006",
     },
 
 ];
